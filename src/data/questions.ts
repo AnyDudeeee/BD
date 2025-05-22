@@ -1,7 +1,7 @@
 import { Question } from '../types/types';
 
 export const quizQuestions: Question[] = [
-  {
+
     id: 1,
     text: "¿Cuál es el orden correcto de las cláusulas en una consulta SQL?",
     answers: [
