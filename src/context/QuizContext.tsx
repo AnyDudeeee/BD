@@ -27,10 +27,20 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isQuizFinished, setIsQuizFinished] = useState(false);
   const [timeElapsed, setTimeElapsed] = useState(0);
 
+  const getRandomQuestions = () => {
+    // Create a copy of the questions array
+    const shuffled = [...quizQuestions];
+    // Shuffle the array using Fisher-Yates algorithm
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    // Take the first 20 questions
+    return shuffled.slice(0, 20);
+  };
+
   useEffect(() => {
-    // Shuffle questions and limit to 20
-    const shuffled = [...quizQuestions].sort(() => 0.5 - Math.random());
-    setQuestions(shuffled.slice(0, 20));
+    setQuestions(getRandomQuestions());
   }, []);
 
   const answerQuestion = (questionId: number, answerId: string, isCorrect: boolean) => {
@@ -58,9 +68,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const resetQuiz = () => {
-    // Shuffle questions again
-    const shuffled = [...quizQuestions].sort(() => 0.5 - Math.random());
-    setQuestions(shuffled.slice(0, 20));
+    setQuestions(getRandomQuestions());
     setCurrentQuestionIndex(0);
     setUserAnswers([]);
     setIsQuizFinished(false);
