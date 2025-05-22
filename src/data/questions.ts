@@ -240,5 +240,77 @@ export const quizQuestions: Question[] = [
     ],
     category: "SQL Básico",
     explanation: "NULL representa la ausencia de un valor o un valor desconocido. No es lo mismo que cero o una cadena vacía."
+  },
+  {
+    id: 21,
+    text: "¿Qué hace la función POWER en SQL?",
+    answers: [
+      { id: "21a", text: "Eleva un número a una potencia específica", isCorrect: true },
+      { id: "21b", text: "Calcula la raíz cuadrada", isCorrect: false },
+      { id: "21c", text: "Redondea un número", isCorrect: false },
+      { id: "21d", text: "Calcula el valor absoluto", isCorrect: false }
+    ],
+    category: "SQL Básico",
+    explanation: "La función POWER o POW eleva un número a una potencia específica. Por ejemplo, POWER(2, 3) devuelve 8."
+  },
+  {
+    id: 22,
+    text: "¿Qué diferencia hay entre TRUNCATE y ROUND?",
+    answers: [
+      { id: "22a", text: "TRUNCATE elimina decimales sin redondear, ROUND redondea al decimal más cercano", isCorrect: true },
+      { id: "22b", text: "Son sinónimos, hacen exactamente lo mismo", isCorrect: false },
+      { id: "22c", text: "TRUNCATE solo funciona con números enteros", isCorrect: false },
+      { id: "22d", text: "ROUND solo funciona con números decimales", isCorrect: false }
+    ],
+    category: "SQL Básico",
+    explanation: "TRUNCATE simplemente elimina los decimales después del punto especificado, mientras que ROUND redondea al valor más cercano."
+  },
+  {
+    id: 23,
+    text: "¿Qué hace la función CONCAT en SQL?",
+    answers: [
+      { id: "23a", text: "Une dos o más cadenas de texto", isCorrect: true },
+      { id: "23b", text: "Divide una cadena en partes", isCorrect: false },
+      { id: "23c", text: "Cuenta el número de caracteres", isCorrect: false },
+      { id: "23d", text: "Convierte texto a mayúsculas", isCorrect: false }
+    ],
+    category: "SQL Básico",
+    explanation: "CONCAT une dos o más cadenas de texto en una sola. Por ejemplo, CONCAT('Hola', ' ', 'Mundo') devuelve 'Hola Mundo'."
+  },
+  {
+    id: 24,
+    text: "¿Cuál es la diferencia entre UNION y UNION ALL?",
+    answers: [
+      { id: "24a", text: "UNION elimina duplicados, UNION ALL mantiene todos los registros", isCorrect: true },
+      { id: "24b", text: "No hay diferencia, son sinónimos", isCorrect: false },
+      { id: "24c", text: "UNION ALL solo funciona con números", isCorrect: false },
+      { id: "24d", text: "UNION solo funciona con texto", isCorrect: false }
+    ],
+    category: "SQL Básico",
+    explanation: "UNION combina resultados de dos consultas eliminando duplicados, mientras que UNION ALL mantiene todos los registros, incluyendo duplicados."
+  },
+  {
+    id: 25,
+    text: "¿Qué es una clave foránea (FOREIGN KEY)?",
+    answers: [
+      { id: "25a", text: "Un campo que referencia la clave primaria de otra tabla", isCorrect: true },
+      { id: "25b", text: "La clave principal de una tabla", isCorrect: false },
+      { id: "25c", text: "Un campo que no puede contener valores nulos", isCorrect: false },
+      { id: "25d", text: "Un campo que debe ser único", isCorrect: false }
+    ],
+    category: "SQL Básico",
+    explanation: "Una clave foránea es un campo que establece una relación con la clave primaria de otra tabla, manteniendo la integridad referencial."
+  },
+  {
+    id: 100,
+    text: "¿Qué es una transacción en SQL?",
+    answers: [
+      { id: "100a", text: "Una unidad de trabajo que se ejecuta de forma atómica", isCorrect: true },
+      { id: "100b", text: "Un tipo de tabla temporal", isCorrect: false },
+      { id: "100c", text: "Un método de indexación", isCorrect: false },
+      { id: "100d", text: "Un tipo de consulta", isCorrect: false }
+    ],
+    category: "Control de Datos",
+    explanation: "Una transacción es una unidad de trabajo que debe cumplir las propiedades ACID: Atomicidad, Consistencia, Aislamiento y Durabilidad."
   }
 ];
